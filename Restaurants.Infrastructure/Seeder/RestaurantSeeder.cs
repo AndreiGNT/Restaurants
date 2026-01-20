@@ -43,13 +43,15 @@ internal class RestaurantSeeder(RestaurantsDbContext dbContext) : IRestaurantSee
                     new() {
                         Name = "20 Hot Chicken Wings",
                         Description = "The best test ever of doing eating go no lisa wings good no regret etc..",
-                        Price = 18.90M
+                        Price = 18.90M, 
+                        KiloCalories = 1780
                     },
 
                     new() {
                         Name = "6 Hot Chicken Wings",
                         Description = "The best test ever of 6 eating go no lisa wings good no regret",
-                        Price = 12.90M
+                        Price = 12.90M,
+                        KiloCalories = 675
                     }
                 ]
             },
