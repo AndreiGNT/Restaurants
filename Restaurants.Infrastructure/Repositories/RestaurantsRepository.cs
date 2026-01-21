@@ -2,6 +2,7 @@
 using Restaurants.Domain.Entities;
 using Restaurants.Domain.Repositories;
 using Restaurants.Infrastructure.Persistence;
+using System.Numerics;
 
 namespace Restaurants.Infrastructure.Repositories;
 
