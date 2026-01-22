@@ -5,8 +5,7 @@ namespace Restaurants.API.Controllers;
 
 [ApiController]
 [Route("api/Restaurants")]
-public class RestaurantsController(IRestaurantsService restaurantsService, 
-                                    IRestaurantService restaurantService
+public class RestaurantsController(IRestaurantsService restaurantsService
                                    ) : ControllerBase
 {
     [HttpGet]
@@ -17,9 +16,9 @@ public class RestaurantsController(IRestaurantsService restaurantsService,
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetRestaurant(int id)
+    public async Task<IActionResult> GetRestaurant([FromRoute]int id)
     {
-        var retaurant = await restaurantService.GetRestaurant(id);
+        var retaurant = await restaurantsService.GetRestaurant(id);
 
         if (retaurant == null)
         {
