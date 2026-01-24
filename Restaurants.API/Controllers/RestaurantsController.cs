@@ -26,6 +26,5 @@ public class RestaurantsController(IRestaurantsService restaurantsService
         }
 
         return Ok(retaurant);
-
     }
 }
