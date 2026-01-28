@@ -1,6 +1,5 @@
 @Restaurants.API_HostAddress = https://localhost:7087
 
-
 ###
 
 GET {{Restaurants.API_HostAddress}}/api/Restaurants
@@ -11,3 +10,22 @@ GET {{Restaurants.API_HostAddress}}/api/Restaurants
 GET {{Restaurants.API_HostAddress}}/api/Restaurants/{{id}}
 
 ###
+
+POST {{Restaurants.API_HostAddress}}/api/Restaurants
+Content-Type: application/json
+
+{
+  "Name": "Placite",
+  "Description": "Average food.",
+  "Category": "Fine Dining",
+  "HasDelivery": true,
+  "ContactEmail": "placinte@gmail.com",
+  "ContactNumber": "+373 12345678",
+  "City": "Chisinau",
+  "Street": "Stefan Cel Mare",
+  "PostalCode": "MD-1234"
+}
+
+###
+
+GET 	https://localhost:7087/api/Restaurants/6
