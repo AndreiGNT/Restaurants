@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using Microsoft.Extensions.Logging;
 using Restaurants.Application.Restaurants.Dtos;
 using Restaurants.Domain.Entities;
 using Restaurants.Domain.Repositories;
+using System.ComponentModel.DataAnnotations;
 
 namespace Restaurants.Application.Restaurants;
 
@@ -13,6 +15,7 @@ internal class RestaurantsService(IRestaurantsRepository restaurantsRepository,
     public async Task<int> Create(CreateRestaurantDto dto)
     {
         logger.LogInformation("Creating Restaurant.");
+
         var restaurant = mapper.Map<Restaurant>(dto);
 
         int id = await restaurantsRepository.Create(restaurant);
