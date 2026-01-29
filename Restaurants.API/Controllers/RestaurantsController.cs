@@ -9,6 +9,14 @@ namespace Restaurants.API.Controllers;
 public class RestaurantsController(IRestaurantsService restaurantsService
                                    ) : ControllerBase
 {
+    [HttpPost]
+    public async Task<IActionResult> CreateRestaurant([FromBody] CreateRestaurantDto createRestaurantDto)
+    {
+        int id = await restaurantsService.Create(createRestaurantDto);
+
+        return CreatedAtAction(nameof(GetRestaurant), new { id }, null);
+    }
+
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
@@ -27,13 +35,5 @@ public class RestaurantsController(IRestaurantsService restaurantsService
         }
 
         return Ok(retaurant);
-    }
-
-    [HttpPost]
-    public async Task<IActionResult> CreateRestaurant([FromBody]CreateRestaurantDto createRestaurantDto)
-    {
-        int id = await restaurantsService.Create(createRestaurantDto);
-
-        return CreatedAtAction(nameof(GetRestaurant), new { id } , null);
     }
 }
