@@ -28,17 +28,5 @@ Content-Type: application/json
 
 ###
 
-POST {{Restaurants.API_HostAddress}}/api/Restaurants
-Content-Type: application/json
 
-{
-  "Name": "Placite",
-  "Description": "Average food.",
-  "Category": "Fine Dining",
-  "HasDelivery": true,
-  "ContactEmail": "placint",
-  "ContactNumber": "+373",
-  "City": "Chisinau",
-  "Street": "Stefan Cel Mare",
-  "PostalCode": "MD-1"
-}
+DELETE {{Restaurants.API_HostAddress}}/api/Restaurants/7
