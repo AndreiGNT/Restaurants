@@ -15,7 +15,7 @@ POST {{Restaurants.API_HostAddress}}/api/Restaurants
 Content-Type: application/json
 
 {
-  "Name": "Placite",
+  "Name": "Placite Test",
   "Description": "Fast Food",
   "Category": "Fine Dining",
   "HasDelivery": true,
@@ -42,7 +42,3 @@ Content-Type: application/json
   "Street": "Stefan Cel Mare",
   "PostalCode": "MD-1"
 }
-
-###
-
-GET 	https://localhost:7087/api/Restaurants/6
