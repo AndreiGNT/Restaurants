@@ -16,7 +16,7 @@ Content-Type: application/json
 
 {
   "Name": "Placite Test",
-  "Description": "Fast Food",
+  "Description": "Just a description",
   "Category": "Fine Dining",
   "HasDelivery": true,
   "ContactEmail": "placinte@gmail.com",

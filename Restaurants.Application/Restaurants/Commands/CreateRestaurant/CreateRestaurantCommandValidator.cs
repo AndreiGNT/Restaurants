@@ -13,11 +13,11 @@ public class CreateRestaurantCommandValidator : AbstractValidator<CreateRestaura
             .WithMessage("The name is required with a length between of 3 to 50.");
 
         RuleFor(dto => dto.Description)
-            .Must(validCategories.Contains)
-            .WithMessage("Invalid category. Please choose from the valid categories.");
+            .NotEmpty()
+            .WithMessage("Description is required.");
 
         RuleFor(dto => dto.Category)
-            .NotEmpty()
+            .Must(validCategories.Contains)
             .WithMessage("A valid category is required.");
 
         RuleFor(dto => dto.ContactEmail)
