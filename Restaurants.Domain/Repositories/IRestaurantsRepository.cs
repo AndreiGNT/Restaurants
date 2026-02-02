@@ -10,5 +10,7 @@ public interface IRestaurantsRepository
 
     Task<int> Create(Restaurant restaurant);
 
+    Task SaveChanges();
+
     Task Delete(Restaurant restaurant);
 }

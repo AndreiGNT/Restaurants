@@ -6,7 +6,7 @@ GET {{Restaurants.API_HostAddress}}/api/Restaurants
 
 ###
 
-@id=2
+@id=14
 GET {{Restaurants.API_HostAddress}}/api/Restaurants/{{id}}
 
 ###
@@ -24,6 +24,17 @@ Content-Type: application/json
   "City": "Chisinau",
   "Street": "Stefan Cel Mare",
   "PostalCode": "MD-1234"
+}
+
+###
+
+PATCH {{Restaurants.API_HostAddress}}/api/Restaurants/14
+Content-Type: application/json
+
+{
+    "Name": "Placite Test 123",
+    "Description": "Fast Food to eat every day",
+    "HasDelivery": true
 }
 
 ###
