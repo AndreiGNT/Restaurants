@@ -40,4 +40,4 @@ Content-Type: application/json
 ###
 
 
-DELETE {{Restaurants.API_HostAddress}}/api/Restaurants/7
+DELETE {{Restaurants.API_HostAddress}}/api/Restaurants/900
