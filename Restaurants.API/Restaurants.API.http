@@ -6,7 +6,7 @@ GET {{Restaurants.API_HostAddress}}/api/Restaurants
 
 ###
 
-@id=14
+@id=30
 GET {{Restaurants.API_HostAddress}}/api/Restaurants/{{id}}
 
 ###
@@ -28,7 +28,7 @@ Content-Type: application/json
 
 ###
 
-PATCH {{Restaurants.API_HostAddress}}/api/Restaurants/14
+PATCH {{Restaurants.API_HostAddress}}/api/Restaurants/30
 Content-Type: application/json
 
 {
