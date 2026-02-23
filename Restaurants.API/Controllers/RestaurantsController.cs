@@ -25,11 +25,6 @@ public class RestaurantsController( IMediator mediator ) : ControllerBase
     {
         var retaurant = await mediator.Send(new GetRestaurantByIdQuery(id));
 
-        if (retaurant == null)
-        {
-            return NotFound();
-        }
-
         return Ok(retaurant);
     }
 
