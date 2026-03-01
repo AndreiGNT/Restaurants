@@ -6,7 +6,7 @@ GET {{Restaurants.API_HostAddress}}/api/Restaurants
 
 ###
 
-@id=14
+@id=3
 GET {{Restaurants.API_HostAddress}}/api/Restaurants/{{id}}
 
 ###
@@ -41,3 +41,17 @@ Content-Type: application/json
 
 
 DELETE {{Restaurants.API_HostAddress}}/api/Restaurants/21
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/Restaurants/{{id}}/dishes
+Content-Type: application/json
+
+{
+  "Name": "Big Kebab",
+  "Description": "The best kebab money can buy.",
+  "Price": 70,
+  "KiloCalories": 1350
+}
+
+###
