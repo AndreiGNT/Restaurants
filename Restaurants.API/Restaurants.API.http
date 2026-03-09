@@ -1,5 +1,7 @@
 @Restaurants.API_HostAddress = https://localhost:7087
 
+// Restaurants CRUD Section
+
 ###
 
 GET {{Restaurants.API_HostAddress}}/api/Restaurants
@@ -40,9 +42,12 @@ Content-Type: application/json
 ###
 
 
-DELETE {{Restaurants.API_HostAddress}}/api/Restaurants/21
+DELETE {{Restaurants.API_HostAddress}}/api/Restaurants/23
 
 ###
+
+
+// Dish CRUD Section
 
 POST {{Restaurants.API_HostAddress}}/api/Restaurants/{{id}}/dishes
 Content-Type: application/json
@@ -56,10 +61,15 @@ Content-Type: application/json
 
 ###
 
-GET {{Restaurants.API_HostAddress}}/api/Restaurants/1/dishes
+GET {{Restaurants.API_HostAddress}}/api/Restaurants/2/dishes
 
 ###
 
 GET {{Restaurants.API_HostAddress}}/api/Restaurants/1/dishes/1
+
+###
+
+    
+DELETE {{Restaurants.API_HostAddress}}/api/Restaurants/3/dishes
 
 ###
