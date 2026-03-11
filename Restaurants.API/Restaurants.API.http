@@ -73,3 +73,27 @@ GET {{Restaurants.API_HostAddress}}/api/Restaurants/{{id}}/dishes/11
 DELETE {{Restaurants.API_HostAddress}}/api/Restaurants/{{id}}/dishes
 
 ###
+
+
+// User Identity Section
+
+POST {{Restaurants.API_HostAddress}}/register
+Content-Type: application/json
+
+{
+  "email": "testuser1@gmail.com",
+  "password": "Drinkpassword!1"
+}
+
+###
+ 
+POST {{Restaurants.API_HostAddress}}/login
+Content-Type: application/json
+
+{
+  "email": "testuser1@gmail.com",
+  "password": "Drinkpassword!1"
+}
+
+
+###
