@@ -53,23 +53,23 @@ POST {{Restaurants.API_HostAddress}}/api/Restaurants/{{id}}/dishes
 Content-Type: application/json
 
 {
-  "Name": "Big Kebab",
-  "Description": "The best kebab money can buy.",
-  "Price": 70,
-  "KiloCalories": 1350
+  "Name": "CocaCola",
+  "Description": "Drink",
+  "Price": 25,
+  "KiloCalories": 270
 }
 
 ###
 
-GET {{Restaurants.API_HostAddress}}/api/Restaurants/2/dishes
+GET {{Restaurants.API_HostAddress}}/api/Restaurants/{{id}}/dishes
 
 ###
 
-GET {{Restaurants.API_HostAddress}}/api/Restaurants/1/dishes/1
+GET {{Restaurants.API_HostAddress}}/api/Restaurants/{{id}}/dishes/11
 
 ###
 
     
-DELETE {{Restaurants.API_HostAddress}}/api/Restaurants/3/dishes
+DELETE {{Restaurants.API_HostAddress}}/api/Restaurants/{{id}}/dishes
 
 ###

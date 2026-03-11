@@ -9,8 +9,9 @@ namespace Restaurants.Application.Dishes.Commands.DeleteAllDishes;
 
 public class DeleteAllDishesForRestaurantCommandHandler(
         ILogger<DeleteAllDishesForRestaurantCommandHandler> logger,
-        IRestaurantsRepository restaurantsRepository
-                                            ) : IRequestHandler<DeleteAllDishesForRestaurantCommand>
+        IRestaurantsRepository restaurantsRepository,
+        IDishesRepository dishesRepository
+                                                    ) : IRequestHandler<DeleteAllDishesForRestaurantCommand>
 {
     public async Task Handle(DeleteAllDishesForRestaurantCommand request, CancellationToken cancellationToken)
     {
@@ -22,8 +23,6 @@ public class DeleteAllDishesForRestaurantCommandHandler(
             throw new NotFoundException(nameof(Restaurant), request.RestaurantId.ToString());
         }
 
-        restaurant.Dishes.Clear();
-
-        await restaurantsRepository.SaveChanges();
+        await dishesRepository.Delete(restaurant.Dishes);
     }
 }
